@@ -1,0 +1,14 @@
+{
+    "name": "kanopi/saplings-ai-agents",
+    "type": "drupal-recipe",
+    "description": "Adds an AI powered chatbot for Drupal site building.",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": ">=10.4",
+        "drupal/ai": "1.0.x-dev",
+        "drupal/ai_agents": "1.0.x-dev",
+        "drupal/ai_evaluations": "1.0.x-dev",
+        "drupal/ai_provider_anthropic": "1.0.x-dev",
+        "drupal/ai_provider_openai": "1.0.x-dev"
+    }
+}

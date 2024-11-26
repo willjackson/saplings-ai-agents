@@ -1,0 +1,51 @@
+name: Saplings AI Agents
+type: Site
+description: 'Adds an AI powered chatbot for Drupal site building.'
+install:
+  - block
+  - ai
+  - ai_provider_openai
+  - ai_provider_anthropic
+  - ai_assistant_api
+  - ai_chatbot
+  - ai_agents
+  - ai_evaluations
+  - key
+config:
+  # If the config files exist, skip them.
+  strict: false
+  import:
+    ai_evaluations: '*'
+  actions:
+    block.block.ai_chatbot:
+      placeBlockInAdminTheme:
+        id: ai_chatbot
+        # Set the region to place the block in.
+        region:
+          claro: content
+          gin: content
+        default_region: content
+        # Place the block after any blocks already in the region.
+        position: last
+        # Here we add all the block settings.
+        plugin: ai_chatbot_block
+        settings:
+          id: ai_ev_chatbot_block
+          label: 'Drupal chatbot'
+          label_display: '0'
+          provider: ai_chatbot
+          ai_assistant: drupal_agent_evaluation_assistant
+          bot_name: 'Drupal Agent'
+          bot_image: /core/misc/druplicon.png
+          use_username: 1
+          default_username: User
+          use_avatar: 1
+          default_avatar: /core/misc/favicon.ico
+          first_message: 'Hello! How can I assist you today?'
+          stream: 0
+          toggle_state: remember
+          show_structured_results: 1
+          output_type: markdown
+    provider_openai.settings:
+      simpleConfigUpdate:
+        api_key: openai_provider
