@@ -8,7 +8,6 @@
         "drupal/ai": "1.0.x-dev",
         "drupal/ai_agents": "1.0.x-dev",
         "drupal/ai_evaluations": "1.0.x-dev",
-        "drupal/ai_provider_anthropic": "1.0.x-dev",
         "drupal/ai_provider_openai": "1.0.x-dev"
     }
 }
