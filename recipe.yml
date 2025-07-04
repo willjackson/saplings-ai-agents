@@ -45,6 +45,6 @@ config:
           toggle_state: remember
           show_structured_results: 1
           output_type: markdown
-    provider_openai.settings:
+    ai_provider_openai.settings:
       simpleConfigUpdate:
         api_key: openai_provider
